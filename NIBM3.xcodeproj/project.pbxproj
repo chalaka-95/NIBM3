@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B007E54229163BE600848C5D /* MoviesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007E54129163BE600848C5D /* MoviesModule.swift */; };
 		B00F68542915808B0014875C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F68532915808B0014875C /* DashboardViewController.swift */; };
 		B081243B290CF7A0000449DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081243A290CF7A0000449DB /* DetailsViewController.swift */; };
 		B0A8A708290CF8DC00B19D36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0A8A707290CF8DC00B19D36 /* SnapKit */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B007E54129163BE600848C5D /* MoviesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModule.swift; sourceTree = "<group>"; };
 		B00F68532915808B0014875C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B081243A290CF7A0000449DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B0CF5D9F2903B5A5001E0C8D /* NIBM3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBM3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 				B0CF5DB82903EEBF001E0C8D /* TableDemoViewController.swift */,
 				B081243A290CF7A0000449DB /* DetailsViewController.swift */,
 				B00F68532915808B0014875C /* DashboardViewController.swift */,
+				B007E54129163BE600848C5D /* MoviesModule.swift */,
 			);
 			path = NIBM3;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0CF5DB92903EEBF001E0C8D /* TableDemoViewController.swift in Sources */,
+				B007E54229163BE600848C5D /* MoviesModule.swift in Sources */,
 				B00F68542915808B0014875C /* DashboardViewController.swift in Sources */,
 				B0CF5DA72903B5A5001E0C8D /* ViewController.swift in Sources */,
 				B0CF5DA32903B5A5001E0C8D /* AppDelegate.swift in Sources */,

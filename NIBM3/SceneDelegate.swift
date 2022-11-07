@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = scene as? UIWindowScene else {return}
         let mywindow = UIWindow(windowScene: scene)
         //let nav  = UINavigationController(rootViewController: DetailsViewController())
-        let nav  = UINavigationController(rootViewController: DashboardViewController())
+        let nav  = UINavigationController(rootViewController: TableDemoViewController())
         mywindow.rootViewController=nav
         self.window = mywindow
         mywindow.makeKeyAndVisible()

@@ -8,16 +8,18 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
+
 class TableDemoViewController: UIViewController {
     
     let data = ["Apple", "Google", "Facebook", "HP"]
-    
+    var movies : [Result] =  [Result]()
     let tableView : UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -27,6 +29,7 @@ class TableDemoViewController: UIViewController {
         tableView.register(MyCellView.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
         setContraint()
+        downloadMovies()
         // Do any additional setup after loading the view.
     }
     
@@ -35,22 +38,48 @@ class TableDemoViewController: UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive  = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-                
+        
     }
-
+    
+    func downloadMovies(){
+        let url = URL(string: "http://api.themoviedb.org/4/list/3?page=1&api_key=f9923821f549f034afb399cd27e37afd")!
+        
+        let dataTask = URLSession.shared.dataTask(with: URLRequest(url: url)){ data, res,
+            error in
+            if let movieData = data {
+                let json = try? JSONDecoder().decode(MoviesModule.self,from:movieData)
+                
+                if let movies = json?.results {
+                    self.movies = movies
+                }
+                DispatchQueue.main.async{
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        dataTask.resume()
+    }
+    
 }
 
 extension TableDemoViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int {
-        return data.count
+        return self.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         //let cell = UITableViewCell(style: .subtitle,reuseIdentifier: "cell")
         let cell : MyCellView = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! MyCellView
-        cell.myImage.image = UIImage(named: "logo")
-        cell.titleLabel.text = data[indexPath.row]
-        cell.descriptionLabel.text = "Description Label"
+//        cell.myImage.image = UIImage(named: "logo")
+//        cell.titleLabel.text = data[indexPath.row]
+//        cell.descriptionLabel.text = "Description Label"
+        
+        
+        cell.titleLabel.text = self.movies[indexPath.row].originalTitle
+        let imageURL = "" + movies[indexPath.row].posterPath
+        if let url = URL(string : imageURL){
+        cell.myImage.kf.setImage(with : url)
+    }
         return cell
     }
     
@@ -58,6 +87,7 @@ extension TableDemoViewController : UITableViewDataSource, UITableViewDelegate{
         return 120
     }
 }
+//
 class MyCellView : UITableViewCell{    
     
     let baseView : UIView = {
@@ -117,16 +147,19 @@ class MyCellView : UITableViewCell{
     
     private func setupConstraint()
     {
-        baseView.snp.makeConstraints{ make in
-            make.leading.top.equalToSuperview().offset(20)
-            make.trailing.bottom.equalToSuperview().offset(-20)
-        }
-        myImage.snp.makeConstraints{ make in
-            make.leading.top.equalToSuperview().offset(20)
-            make.trailing.bottom.equalToSuperview().offset(-20)
-            
-        }
+//        baseView.snp.makeConstraints{ make in
+//            make.leading.top.equalToSuperview().offset(20)
+//            make.trailing.bottom.equalToSuperview().offset(-20)
+       // }
+        //        myImage.snp.makeConstraints{ make in
+        //            make.leading.top.equalToSuperview().offset(20)
+        //            make.trailing.bottom.equalToSuperview().offset(-20)
+        //
+        //        }
+       
     }
+    
+    
     
     func layComponent(){
         labelHolder.addArrangedSubview(titleLabel)
