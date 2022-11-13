@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		B007E54229163BE600848C5D /* MoviesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007E54129163BE600848C5D /* MoviesModule.swift */; };
 		B00F68542915808B0014875C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F68532915808B0014875C /* DashboardViewController.swift */; };
+		B01E52D3291F7229001E3AAD /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E52D2291F7229001E3AAD /* MovieDetailsViewController.swift */; };
+		B01E52D9291F9596001E3AAD /* RickAndMorthiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E52D8291F9596001E3AAD /* RickAndMorthiData.swift */; };
+		B01E52DC291F96B8001E3AAD /* RickAndMorthiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E52DB291F96B8001E3AAD /* RickAndMorthiViewController.swift */; };
 		B081243B290CF7A0000449DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081243A290CF7A0000449DB /* DetailsViewController.swift */; };
+		B0884D36291DB3B200922862 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B0884D35291DB3B200922862 /* Kingfisher */; };
 		B0A8A708290CF8DC00B19D36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0A8A707290CF8DC00B19D36 /* SnapKit */; };
 		B0CF5DA32903B5A5001E0C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5DA22903B5A5001E0C8D /* AppDelegate.swift */; };
 		B0CF5DA52903B5A5001E0C8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5DA42903B5A5001E0C8D /* SceneDelegate.swift */; };
@@ -22,6 +26,9 @@
 /* Begin PBXFileReference section */
 		B007E54129163BE600848C5D /* MoviesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModule.swift; sourceTree = "<group>"; };
 		B00F68532915808B0014875C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		B01E52D2291F7229001E3AAD /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		B01E52D8291F9596001E3AAD /* RickAndMorthiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorthiData.swift; sourceTree = "<group>"; };
+		B01E52DB291F96B8001E3AAD /* RickAndMorthiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorthiViewController.swift; sourceTree = "<group>"; };
 		B081243A290CF7A0000449DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B0CF5D9F2903B5A5001E0C8D /* NIBM3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBM3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF5DA22903B5A5001E0C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0884D36291DB3B200922862 /* Kingfisher in Frameworks */,
 				B0A8A708290CF8DC00B19D36 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +82,9 @@
 				B081243A290CF7A0000449DB /* DetailsViewController.swift */,
 				B00F68532915808B0014875C /* DashboardViewController.swift */,
 				B007E54129163BE600848C5D /* MoviesModule.swift */,
+				B01E52D2291F7229001E3AAD /* MovieDetailsViewController.swift */,
+				B01E52D8291F9596001E3AAD /* RickAndMorthiData.swift */,
+				B01E52DB291F96B8001E3AAD /* RickAndMorthiViewController.swift */,
 			);
 			path = NIBM3;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 			name = NIBM3;
 			packageProductDependencies = (
 				B0A8A707290CF8DC00B19D36 /* SnapKit */,
+				B0884D35291DB3B200922862 /* Kingfisher */,
 			);
 			productName = NIBM3;
 			productReference = B0CF5D9F2903B5A5001E0C8D /* NIBM3.app */;
@@ -127,6 +139,7 @@
 			mainGroup = B0CF5D962903B5A5001E0C8D;
 			packageReferences = (
 				B0A8A706290CF8DC00B19D36 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B0884D34291DB3B200922862 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B0CF5DA02903B5A5001E0C8D /* Products */;
 			projectDirPath = "";
@@ -154,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01E52DC291F96B8001E3AAD /* RickAndMorthiViewController.swift in Sources */,
+				B01E52D3291F7229001E3AAD /* MovieDetailsViewController.swift in Sources */,
 				B0CF5DB92903EEBF001E0C8D /* TableDemoViewController.swift in Sources */,
 				B007E54229163BE600848C5D /* MoviesModule.swift in Sources */,
 				B00F68542915808B0014875C /* DashboardViewController.swift in Sources */,
@@ -161,6 +176,7 @@
 				B0CF5DA32903B5A5001E0C8D /* AppDelegate.swift in Sources */,
 				B0CF5DA52903B5A5001E0C8D /* SceneDelegate.swift in Sources */,
 				B081243B290CF7A0000449DB /* DetailsViewController.swift in Sources */,
+				B01E52D9291F9596001E3AAD /* RickAndMorthiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +368,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B0884D34291DB3B200922862 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 		B0A8A706290CF8DC00B19D36 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -363,6 +387,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B0884D35291DB3B200922862 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0884D34291DB3B200922862 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		B0A8A707290CF8DC00B19D36 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B0A8A706290CF8DC00B19D36 /* XCRemoteSwiftPackageReference "SnapKit" */;
